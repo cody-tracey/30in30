@@ -5,11 +5,8 @@ const down = (e) => {
         let l = document.body.querySelectorAll(`[data-key="${e.keyCode}"]`)
 
         if (!l[0].className.includes('playing sound')) l[0].className += ' playing sound';
-
+       l[1].play();
     }
-
-
-
 
 }
 const up = (e) => {
@@ -17,6 +14,8 @@ const up = (e) => {
         let l = document.body.querySelectorAll(`[data-key="${e.keyCode}"]`)
 
         l[0].className = 'key'
+        l[1].pause();
+ 
 
     }
 }
