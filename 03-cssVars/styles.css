@@ -15,3 +15,18 @@ input {
     width: 100px;
 }
 
+.hl{
+    color: var(--color);
+}
+
+img{
+    border-color: var(--color);
+    border: 50px solid;
+    filter: blur(var(--blur));
+}
+
+:root{
+    --space: 10px;
+    --blur: 0px;
+    --color: white;
+}
