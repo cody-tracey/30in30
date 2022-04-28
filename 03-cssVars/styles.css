@@ -1,3 +1,9 @@
+:root {
+    --space: 10px;
+    --blur: 10px;
+    --color: #ffc600;
+}
+
 body {
     text-align: center;
     background: #193549;
@@ -15,18 +21,12 @@ input {
     width: 100px;
 }
 
-.hl{
+.hl {
     color: var(--color);
 }
 
-img{
-    border-color: var(--color);
-    border: 50px solid;
+img {
+    background: var(--color);
     filter: blur(var(--blur));
-}
-
-:root{
-    --space: 10px;
-    --blur: 0px;
-    --color: white;
+    padding: var(--space);
 }

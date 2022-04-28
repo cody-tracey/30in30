@@ -4,15 +4,15 @@ let ba = document.getElementById('base');
 const r = document.querySelector(':root');
 
 s.oninput = (e) => {
-    console.log(e.target.value)
+    r.style.setProperty('--space', `${e.target.value}px`)
 }
 
 bl.oninput = (e) => {
-    console.log(e.target.value)
-    console.log(r)
+    r.style.setProperty('--blur', `${e.target.value}px`)
 }
 
 ba.oninput = (e) => {
-    console.log(e.target.value)
+    r.style.setProperty('--color', e.target.value)
+
 }
 
