@@ -4,9 +4,14 @@ const locations = [];
 
 let places = fetch(endpoint)
     .then(res => res.json())
-    .then(data => data.forEach(i => {
-        locations.push(i)
-    }))
+    .then(data => locations.push(...data))
     .catch(err => console.error(err));
 
-console.log(locations)
+
+const findMatches = (word,locations) => {
+    return locations.filter(i => {
+        const r = new RegExp(word,'gi')
+        return i.city.match(r) || i.state.match(r)
+    });
+};
+
