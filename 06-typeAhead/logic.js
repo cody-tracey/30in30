@@ -13,6 +13,10 @@ const findMatches = (word, cities) => {
     });
 }
 
+const numWCommas = x => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function displayMatches() {
     const matchArray = findMatches(this.value, cities);
     const html = matchArray.map(i => {
@@ -23,7 +27,7 @@ function displayMatches() {
         return `
             <li>
                 <span class='name'>${city}, ${state}</span>
-                <span class='population'>${i.population}</span>
+                <span class='population'>${numWCommas(i.population)}</span>
             </li>
         `;
     }).join('');
