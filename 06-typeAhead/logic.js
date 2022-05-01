@@ -16,9 +16,11 @@ const findMatches = (word, cities) => {
 function displayMatches() {
     const matchArray = findMatches(this.value, cities);
     const html = matchArray.map(i => {
+        const regex = new RegExp(this.value, 'gi');
+        const city = i.city.replace(regex,`<span class='hl'>${this.value}</span>`)
         return `
             <li>
-                <span class='name'>${i.city}, ${i.state}</span>
+                <span class='name'>${city}, ${i.state}</span>
                 <span class='population'>${i.population}</span>
             </li>
         `;
