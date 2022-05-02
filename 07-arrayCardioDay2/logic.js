@@ -35,9 +35,16 @@ console.log(`Is everyone 19 older: ${people.every(i => {
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
 // find the comment with the ID of 823423
-let res = comments.find(i => i.id === 823423)
-console.log(res)
+let res = comments.find(i => i.id === 823423);
+console.log(res);
 
 // Array.prototype.findIndex()
 // Find the comment with this ID
 // delete the comment with the ID of 823423
+
+let id = comments.findIndex(i => {
+    return i.id === 823423
+});
+
+comments.splice(id,1);
+console.log(comments);
