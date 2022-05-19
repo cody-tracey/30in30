@@ -17,7 +17,7 @@ let liItems = [...bands].sort((a, b) => {
         if(aStr > bStr) return 1
         else if (aStr < bStr) return -1
         else return 0;
-}).map(i => `<li>${i}</li>`);
+}).map(i => `<li>${i}</li>`).join('');
 
-
+document.getElementById('bands').innerHTML = liItems;
 
