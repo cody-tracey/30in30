@@ -230,7 +230,7 @@ const projects = [
 
 let content = projects.map((p, index) => {
     let item = `
-    <div class='row'>
+    <div class='row justify-content-center'>
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -248,10 +248,10 @@ let content = projects.map((p, index) => {
         </div>
     </div>
     `;
-    
+
     if (index % 7 === 0) {
         return (
-            `<div class='row'><h1>Week ${index / 7 + 1}</h1></div>${item}`
+            `<div class='row justify-content-center'><h1>Week ${index / 7 + 1}</h1></div>${item}`
         )
     }
     else return item
