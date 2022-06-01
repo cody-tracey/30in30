@@ -1,0 +1,21 @@
+body{
+    background-color: #809999;
+    color: #28322D;
+}
+
+.card{
+background-color: #EEE8E6;
+}
+
+
+/* Bootstrap Overrides*/
+.btn{
+    background-color: #1A7C9A;
+    border-color: #1A7C9A;
+}
+
+.btn:hover{
+    background-color: #104d60;
+    border-color: #104d60;
+}
+
